@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "Flick",
+    "slug": "Flick",
+    "version": "1.0.0",
+    "scheme": "flick",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.flick.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-dev-client",
+      "expo-router",
+      "expo-sharing",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Flick to access your photos to create clipart.",
+          "cameraPermission": "Allow Flick to use your camera to take photos for clipart."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow Flick to save generated clipart to your gallery.",
+          "savePhotosPermission": "Allow Flick to save generated clipart to your gallery."
+        }
+      ]
+    ]
+  }
+}
