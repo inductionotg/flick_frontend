@@ -8,13 +8,17 @@ function guessMimeFromUri(uri) {
   return 'image/jpeg';
 }
 
-export async function generateClipart(imageUri, style) {
+export async function generateClipart(imageUri, style, options = {}) {
+  const promptExtra = typeof options.promptExtra === 'string' ? options.promptExtra : '';
 
   const mime = guessMimeFromUri(imageUri);
   const ext = mime.split('/')[1] || 'jpg';
 
   const formData = new FormData();
   formData.append('style', style.id);
+  if (promptExtra.trim()) {
+    formData.append('promptExtra', promptExtra.trim());
+  }
   formData.append('image', {
     uri: imageUri,
     name: `upload.${ext}`,
@@ -45,9 +49,9 @@ export async function generateClipart(imageUri, style) {
   }
 }
 
-export async function generateAllStyles(imageUri, styles) {
+export async function generateAllStyles(imageUri, styles, options = {}) {
   const promises = styles.map((style) =>
-    generateClipart(imageUri, style)
+    generateClipart(imageUri, style, options)
       .then((data) => ({ styleId: style.id, imageUrl: data.imageUrl, status: 'success' }))
       .catch((err) => ({ styleId: style.id, error: err.message, status: 'error' }))
   );
