@@ -120,13 +120,6 @@ The app uses Expo modules for gallery save and native share flows so generated i
 
 ## Tradeoffs Made
 
-### Hardcoded backend base URL
-
-Using a hardcoded `API_BASE_URL` in `services/api.js` is fast for local development, but it is not ideal for team development, staging environments, or production builds. A config or environment-based setup would be more flexible.
-
-### Dev client adds build complexity
-
-Using `expo-dev-client` gives more native capability than Expo Go, but it also means native changes require rebuilds. It also increases debug build size.
 
 ### Local state only
 
@@ -157,7 +150,4 @@ flick_app/
   package.json
 ```
 
-## Notes
 
-- App icon and splash screen changes are native changes, so they require a rebuild and reinstall to appear correctly.
-- Debug APKs are much larger than release builds because they include debug tooling and unoptimized native assets/libraries.
