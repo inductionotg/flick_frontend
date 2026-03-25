@@ -1,5 +1,15 @@
 export const MAX_PROMPT_EXTRA_LENGTH = 400;
 
+/** Decode promptExtra from expo-router search params (Home encodes with encodeURIComponent). */
+export function decodePromptExtraFromRoute(raw) {
+  if (raw == null || raw === '') return '';
+  try {
+    return decodeURIComponent(String(raw));
+  } catch {
+    return String(raw);
+  }
+}
+
 const BLOCKLIST = [
   /ignore\s+(all\s+)?(previous|prior|above)\s+instructions?/i,
   /disregard\s+(the\s+)?(system|above)/i,
