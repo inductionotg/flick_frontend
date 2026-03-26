@@ -2,7 +2,6 @@ import { Modal, View, Text, Image, TouchableOpacity, StyleSheet } from 'react-na
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { COLORS, SPACING, RADIUS, FONT_SIZE, SHADOWS } from '../../constants/theme';
 import { SCREEN_WIDTH } from './layout';
-import { styleEmoji } from './styleEmoji';
 
 export default function ImagePreviewModal({
   visible,
@@ -17,7 +16,7 @@ export default function ImagePreviewModal({
         <SafeAreaView style={styles.container}>
           <View style={styles.header}>
             <Text style={styles.title}>
-              {selectedImage ? `${styleEmoji(selectedImage.style)} ${selectedImage.style.name}` : ''}
+              {selectedImage ? selectedImage.style.name : ''}
             </Text>
             <TouchableOpacity onPress={onClose} style={styles.closeButton}>
               <Text style={styles.closeText}>✕</Text>

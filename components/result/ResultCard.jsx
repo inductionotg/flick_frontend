@@ -1,7 +1,6 @@
 import { View, Text, Image, TouchableOpacity, StyleSheet, ActivityIndicator } from 'react-native';
 import { COLORS, SPACING, RADIUS, FONT_SIZE } from '../../constants/theme';
 import SkeletonLoader from '../SkeletonLoader';
-import { styleEmoji } from './styleEmoji';
 
 export default function ResultCard({
   style,
@@ -16,7 +15,6 @@ export default function ResultCard({
   return (
     <View style={[styles.card, { width: cardWidth }]}>
       <View style={styles.cardHeader}>
-        <Text style={styles.icon}>{styleEmoji(style)}</Text>
         <Text style={styles.styleName}>{style.name}</Text>
       </View>
 
@@ -76,9 +74,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: SPACING.sm,
     gap: SPACING.xs,
-  },
-  icon: {
-    fontSize: 16,
   },
   styleName: {
     fontSize: FONT_SIZE.sm,

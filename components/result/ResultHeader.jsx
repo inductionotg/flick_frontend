@@ -5,7 +5,7 @@ export default function ResultHeader({ hasSession, styleCount, onBack }) {
   return (
     <View style={styles.header}>
       <TouchableOpacity onPress={onBack} style={styles.backButton}>
-        <Text style={styles.backText}>← Home</Text>
+        <Text style={styles.backText}>← Create</Text>
       </TouchableOpacity>
       <Text style={styles.title}>Results</Text>
       <Text style={styles.subtitle}>
