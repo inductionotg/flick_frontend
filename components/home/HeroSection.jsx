@@ -4,7 +4,7 @@ import { COLORS, SPACING, FONT_SIZE } from '../../constants/theme';
 export default function HeroSection() {
   return (
     <>
-      <Text style={s.brand}>Clip Art</Text>
+      <Text style={s.brand}>ToonMe</Text>
       <View style={s.heroSection}>
         <Text style={s.heroText}>
           Turn your{'\n'}world into <Text style={s.heroAccent}>art.</Text>

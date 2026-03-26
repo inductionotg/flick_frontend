@@ -1,11 +1,12 @@
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import { COLORS, SPACING, RADIUS, FONT_SIZE, SHADOWS } from '../../constants/theme';
 
 export default function ImageUploader({ onPickGallery, onTakePhoto }) {
   return (
     <View style={s.uploadBox}>
       <View style={s.uploadIconWrap}>
-        <Text style={s.uploadIconText}>☁️</Text>
+        <Ionicons name="cloud-upload" size={28} color={COLORS.teal} />
       </View>
       <Text style={s.uploadTitle}>Drop your image here</Text>
       <Text style={s.uploadHint}>
