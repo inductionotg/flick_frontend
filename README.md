@@ -1,6 +1,6 @@
 # Flick Frontend
 
-React Native frontend for `Flick`, built with Expo and `expo-router`. The app lets users pick or capture an image, choose one or more visual styles, send the image to the backend for generation, and then preview, save, or share the generated clipart results.
+React Native frontend for `ToonMe`, built with Expo and `expo-router`. The app lets users pick or capture an image, choose one or more visual styles, send the image to the backend for generation, and then preview, save, or share the generated clipart results.
 
 ## Features
 
