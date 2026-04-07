@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://flick-backend-eqs8.onrender.com';
+const API_BASE_URL = 'http://192.168.1.20:3000';
 
 function guessMimeFromUri(uri) {
   const lower = String(uri).toLowerCase();

@@ -41,6 +41,15 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
+        name="hairstyles"
+        options={{
+          title: 'Hairstyles',
+          tabBarIcon: ({ focused }) => (
+            <TabIcon label="Hairstyles" iconName="cut" focused={focused} />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="result"
         options={{
           title: 'Result',
